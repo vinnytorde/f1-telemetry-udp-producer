@@ -1,0 +1,11 @@
+{
+  "name": "telemetry-udp-client",
+  "version": "1.0.0",
+  "description": "telemetry client for F1 2020 udp server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
