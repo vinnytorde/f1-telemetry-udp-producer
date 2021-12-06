@@ -1,5 +1,5 @@
 {
-  "name": "telemetry-udp-client",
+  "name": "f1-telemetry-udp-producer",
   "version": "1.0.0",
   "description": "telemetry client for F1 2020 udp server",
   "main": "src/index.js",
