@@ -10,9 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
-    "f1-2020-client": "^0.1.6",
-    "kafkajs": "^1.15.0",
-    "nodemon": "^2.0.15"
+    "express": "^4.18.0",
+    "f1-telemetry-client": "^0.1.26",
+    "nodemon": "^2.0.15",
+    "socket.io": "^4.5.0"
   }
 }
