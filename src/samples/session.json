@@ -1,0 +1,261 @@
+{
+    "m_header": {
+        "m_packetFormat": 2020,
+        "m_gameMajorVersion": 1,
+        "m_gameMinorVersion": 19,
+        "m_packetVersion": 1,
+        "m_packetId": 1,
+        "m_sessionUID": "10203360592020108122",
+        "m_sessionTime": 65.75234985351562,
+        "m_frameIdentifier": 1285,
+        "m_playerCarIndex": 0,
+        "m_secondaryPlayerCarIndex": 255
+    },
+    "m_weather": 0,
+    "m_trackTemperature": 36,
+    "m_airTemperature": 29,
+    "m_totalLaps": 1,
+    "m_trackLength": 5408,
+    "m_sessionType": 12,
+    "m_trackId": 3,
+    "m_formula": 0,
+    "m_sessionTimeLeft": 0,
+    "m_sessionDuration": 600,
+    "m_pitSpeedLimit": 80,
+    "m_gamePaused": 0,
+    "m_isSpectating": 0,
+    "m_spectatorCarIndex": 255,
+    "m_sliProNativeSupport": 0,
+    "m_numMarshalZones": 17,
+    "m_marshalZones": [
+        {
+            "m_zoneStart": 0.9542952179908752,
+            "m_zoneFlag": 0
+        },
+        {
+            "m_zoneStart": 0.10755795240402222,
+            "m_zoneFlag": 0
+        },
+        {
+            "m_zoneStart": 0.17273326218128204,
+            "m_zoneFlag": 0
+        },
+        {
+            "m_zoneStart": 0.25367745757102966,
+            "m_zoneFlag": 0
+        },
+        {
+            "m_zoneStart": 0.32061338424682617,
+            "m_zoneFlag": 0
+        },
+        {
+            "m_zoneStart": 0.3524124026298523,
+            "m_zoneFlag": 0
+        },
+        {
+            "m_zoneStart": 0.3781301975250244,
+            "m_zoneFlag": 0
+        },
+        {
+            "m_zoneStart": 0.4120768904685974,
+            "m_zoneFlag": 0
+        },
+        {
+            "m_zoneStart": 0.44532403349876404,
+            "m_zoneFlag": 0
+        },
+        {
+            "m_zoneStart": 0.48343604803085327,
+            "m_zoneFlag": 0
+        },
+        {
+            "m_zoneStart": 0.5132759213447571,
+            "m_zoneFlag": 0
+        },
+        {
+            "m_zoneStart": 0.625806987285614,
+            "m_zoneFlag": 0
+        },
+        {
+            "m_zoneStart": 0.6610947251319885,
+            "m_zoneFlag": 0
+        },
+        {
+            "m_zoneStart": 0.6935929656028748,
+            "m_zoneFlag": 0
+        },
+        {
+            "m_zoneStart": 0.7500230669975281,
+            "m_zoneFlag": 0
+        },
+        {
+            "m_zoneStart": 0.8023836016654968,
+            "m_zoneFlag": 0
+        },
+        {
+            "m_zoneStart": 0.8905848264694214,
+            "m_zoneFlag": 0
+        },
+        {
+            "m_zoneStart": 0,
+            "m_zoneFlag": 0
+        },
+        {
+            "m_zoneStart": 0,
+            "m_zoneFlag": 0
+        },
+        {
+            "m_zoneStart": 0,
+            "m_zoneFlag": 0
+        },
+        {
+            "m_zoneStart": 0,
+            "m_zoneFlag": 0
+        }
+    ],
+    "m_safetyCarStatus": 0,
+    "m_networkGame": 0,
+    "m_numWeatherForecastSamples": 0,
+    "m_weatherForecastSamples": [
+        {
+            "m_sessionType": 0,
+            "m_timeOffset": 0,
+            "m_weather": 0,
+            "m_trackTemperature": 0,
+            "m_airTemperature": 0
+        },
+        {
+            "m_sessionType": 0,
+            "m_timeOffset": 0,
+            "m_weather": 0,
+            "m_trackTemperature": 0,
+            "m_airTemperature": 0
+        },
+        {
+            "m_sessionType": 0,
+            "m_timeOffset": 0,
+            "m_weather": 0,
+            "m_trackTemperature": 0,
+            "m_airTemperature": 0
+        },
+        {
+            "m_sessionType": 0,
+            "m_timeOffset": 0,
+            "m_weather": 0,
+            "m_trackTemperature": 0,
+            "m_airTemperature": 0
+        },
+        {
+            "m_sessionType": 0,
+            "m_timeOffset": 0,
+            "m_weather": 0,
+            "m_trackTemperature": 0,
+            "m_airTemperature": 0
+        },
+        {
+            "m_sessionType": 0,
+            "m_timeOffset": 0,
+            "m_weather": 0,
+            "m_trackTemperature": 0,
+            "m_airTemperature": 0
+        },
+        {
+            "m_sessionType": 0,
+            "m_timeOffset": 0,
+            "m_weather": 0,
+            "m_trackTemperature": 0,
+            "m_airTemperature": 0
+        },
+        {
+            "m_sessionType": 0,
+            "m_timeOffset": 0,
+            "m_weather": 0,
+            "m_trackTemperature": 0,
+            "m_airTemperature": 0
+        },
+        {
+            "m_sessionType": 0,
+            "m_timeOffset": 0,
+            "m_weather": 0,
+            "m_trackTemperature": 0,
+            "m_airTemperature": 0
+        },
+        {
+            "m_sessionType": 0,
+            "m_timeOffset": 0,
+            "m_weather": 0,
+            "m_trackTemperature": 0,
+            "m_airTemperature": 0
+        },
+        {
+            "m_sessionType": 0,
+            "m_timeOffset": 0,
+            "m_weather": 0,
+            "m_trackTemperature": 0,
+            "m_airTemperature": 0
+        },
+        {
+            "m_sessionType": 0,
+            "m_timeOffset": 0,
+            "m_weather": 0,
+            "m_trackTemperature": 0,
+            "m_airTemperature": 0
+        },
+        {
+            "m_sessionType": 0,
+            "m_timeOffset": 0,
+            "m_weather": 0,
+            "m_trackTemperature": 0,
+            "m_airTemperature": 0
+        },
+        {
+            "m_sessionType": 0,
+            "m_timeOffset": 0,
+            "m_weather": 0,
+            "m_trackTemperature": 0,
+            "m_airTemperature": 0
+        },
+        {
+            "m_sessionType": 0,
+            "m_timeOffset": 0,
+            "m_weather": 0,
+            "m_trackTemperature": 0,
+            "m_airTemperature": 0
+        },
+        {
+            "m_sessionType": 0,
+            "m_timeOffset": 0,
+            "m_weather": 0,
+            "m_trackTemperature": 0,
+            "m_airTemperature": 0
+        },
+        {
+            "m_sessionType": 0,
+            "m_timeOffset": 0,
+            "m_weather": 0,
+            "m_trackTemperature": 0,
+            "m_airTemperature": 0
+        },
+        {
+            "m_sessionType": 0,
+            "m_timeOffset": 0,
+            "m_weather": 0,
+            "m_trackTemperature": 0,
+            "m_airTemperature": 0
+        },
+        {
+            "m_sessionType": 0,
+            "m_timeOffset": 0,
+            "m_weather": 0,
+            "m_trackTemperature": 0,
+            "m_airTemperature": 0
+        },
+        {
+            "m_sessionType": 0,
+            "m_timeOffset": 0,
+            "m_weather": 0,
+            "m_trackTemperature": 0,
+            "m_airTemperature": 0
+        }
+    ]
+}

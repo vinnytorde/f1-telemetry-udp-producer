@@ -1,0 +1,24 @@
+{
+    "m_header": {
+        "m_packetFormat": 2020,
+        "m_gameMajorVersion": 1,
+        "m_gameMinorVersion": 19,
+        "m_packetVersion": 1,
+        "m_packetId": 3,
+        "m_sessionUID": "10203360592020108122",
+        "m_sessionTime": 61.21479415893555,
+        "m_frameIdentifier": 1196,
+        "m_playerCarIndex": 0,
+        "m_secondaryPlayerCarIndex": 255
+    },
+    "m_eventStringCode": "PENA",
+    "m_eventDetails": {
+        "penaltyType": 12,
+        "infringementType": 26,
+        "vehicleIdx": 0,
+        "otherVehicleIdx": 255,
+        "time": 255,
+        "lapNum": 1,
+        "placesGained": 255
+    }
+}
