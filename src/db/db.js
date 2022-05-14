@@ -1,6 +1,5 @@
 const Sql = require('./sql')
 const Database = require('better-sqlite3')
-const match = require('nodemon/lib/monitor/match')
 
 const database = new Database('telemetry.db')
 
@@ -13,31 +12,40 @@ const insertWithArgs = sql => item => {
     return database.prepare(sql).run(args)
 }
 
+const createIfNotExist = sql => () => database.exec(sql)
+const dump = sql => () => database.prepare(sql).all()
+
+const teams = {
+    createIfNotExist: createIfNotExist(Sql.teams.createIfNotExist),
+    seed: () => database.exec(Sql.teams.seed),
+    dump: dump(Sql.teams.dump)
+}
+
 const session = {
-    createIfNotExist: () => database.exec(Sql.session.createIfNotExist),
-    dump: () => database.prepare(Sql.session.dump).all(),
+    createIfNotExist: createIfNotExist(Sql.session.createIfNotExist),
+    dump: dump(Sql.session.dump),
     insert: insertWithArgs(Sql.session.insert),
     getAvailableSessions: () => database.prepare(Sql.session.getAvailableSessions).all(),
     getSession: m_sessionUID => database.prepare(Sql.session.getSession).get({ m_sessionUID })
 }
 
 const lapData = {
-    createIfNotExist: () => database.exec(Sql.lapData.createIfNotExist),
-    dump: () => database.prepare(Sql.lapData.dump).all(),
+    createIfNotExist: createIfNotExist(Sql.lapData.createIfNotExist),
+    dump: dump(Sql.lapData.dump),
     insert: insertWithArgs(Sql.lapData.insert),
     getLapsForDriver: (m_sessionUID, m_driverIndex) => database.prepare(Sql.lapData.getLapsForDriver).all({m_sessionUID, m_driverIndex: Number(m_driverIndex)}),
 }
 
 const carTelemetry = {
-    createIfNotExist: () => database.exec(Sql.carTelemetry.createIfNotExist),
-    dump: () => database.prepare(Sql.carTelemetry.dump).all(),
+    createIfNotExist: createIfNotExist(Sql.carTelemetry.createIfNotExist),
+    dump: dump(Sql.carTelemetry.dump),
     insert: item => database.prepare(Sql.carTelemetry.insert).run(item),
     getLapForDriver: (m_sessionUID, m_driverIndex, m_currentLapNum) =>  database.prepare(Sql.carTelemetry.telemetryForLap).all({m_sessionUID, m_driverIndex: Number(m_driverIndex), m_currentLapNum: Number(m_currentLapNum)}),
 }
 
 const participants = {
-    createIfNotExist: () => database.exec(Sql.participants.createIfNotExist),
-    dump: () => database.prepare(Sql.participants.dump).all(),
+    createIfNotExist: createIfNotExist(Sql.participants.createIfNotExist),
+    dump: dump(Sql.participants.dump),
     insert: item => database.prepare(Sql.participants.insert).run(item),
     getDriversForSession: m_sessionUID => database.prepare(Sql.participants.getDriversForSession).all({ m_sessionUID }),
     getDriver: (m_sessionUID, m_driverIndex) => database.prepare(Sql.participants.getDriver).get({ m_sessionUID, m_driverIndex: Number(m_driverIndex) }),
@@ -168,6 +176,8 @@ function initialize() {
     lapData.createIfNotExist()
     carTelemetry.createIfNotExist()
     participants.createIfNotExist()
+    teams.createIfNotExist()
+    teams.seed()
 }
 
 module.exports = {

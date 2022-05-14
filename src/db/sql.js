@@ -394,11 +394,12 @@ const participants = {
         m_driverIndex,
         m_aiControlled,
         m_driverId,
-        m_teamId,
+        m_teamName,
         m_raceNumber,
         m_nationality,
         m_name
     FROM participants
+    JOIN teams ON teams.m_teamId = participants.m_teamId
     WHERE m_sessionUID = @m_sessionUID
     AND m_name != ''
     GROUP BY m_driverIndex
@@ -420,9 +421,176 @@ const participants = {
     `
 }
 
+const teams = {
+    createIfNotExist: `
+    CREATE TABLE IF NOT EXISTS teams (
+        m_teamName,
+        m_teamId PRIMARY KEY
+    );`,
+    dump: `SELECT * FROM teams`,
+    seed: `
+    INSERT OR IGNORE INTO teams (
+        m_teamId,
+        m_teamName
+    ) VALUES
+        (0, 'Mercedes'),
+        (1, 'Ferrari'),
+        (2, 'Red Bull Racing'),
+        (3, 'Williams'),
+        (4, 'Racing Point'),
+        (5, 'Renault'),
+        (6, 'Alpha Tauri'),
+        (7, 'Haas'),
+        (8, 'McLaren'),
+        (9, 'Alfa Romeo'),
+        (10, 'McLaren 1988'),
+        (11, 'McLaren 1991'),
+        (12, 'Williams 1992'),
+        (13, 'Ferrari 1995'),
+        (14, 'Williams 1996'),
+        (15, 'McLaren 1998'),
+        (16, 'Ferrari 2002'),
+        (17, 'Ferrari 2004'),
+        (18, 'Renault 2006'),
+        (19, 'Ferrari 2007'),
+        (20, 'McLaren 2008'),
+        (21, 'Red Bull 2010'),
+        (22, 'Ferrari 1976'),
+        (23, 'ART Grand Prix'),
+        (24, 'Campos Vexatec Racing'),
+        (25, 'Carlin'),
+        (26, 'Charouz Racing System'),
+        (27, 'DAMS'),
+        (28, 'Russian Time'),
+        (29, 'MP Motorsport'),
+        (30, 'Pertamina'),
+        (31, 'McLaren 1990'),
+        (32, 'Trident'),
+        (33, 'BWT Arden'),
+        (34, 'McLaren 1976'),
+        (35, 'Lotus 1972'),
+        (36, 'Ferrari 1979'),
+        (37, 'McLaren 1982'),
+        (38, 'Williams 2003'),
+        (39, 'Brawn 2009'),
+        (40, 'Lotus 1978'),
+        (41, 'F1 Generic car'),
+        (42, 'Art GP 19'),
+        (43, 'Campos 19'),
+        (44, 'Carlin 19'),
+        (45, 'Sauber Junior Charouz 19'),
+        (46, 'Dams 19'),
+        (47, 'Uni-Virtuosi 19'),
+        (48, 'MP Motorsport 19'),
+        (49, 'Prema 19'),
+        (50, 'Trident 19'),
+        (51, 'Arden 19'),
+        (53, 'Benetton 1994'),
+        (54, 'Benetton 1995'),
+        (55, 'Ferrari 2000'),
+        (56, 'Jordan 1991'),
+        (255, 'My Team');
+    `
+}
+
 module.exports = {
     session,
     lapData,
     carTelemetry,
     participants,
+    teams,
 }
+
+
+
+
+	
+
+// 1 American
+// 31 Greek
+// 61 Panamanian
+// 2 Argentinean
+// 32 Guatemalan
+// 62 Paraguayan
+// 3 Australian
+// 33 Honduran
+// 63 Peruvian
+// 4 Austrian
+// 34 Hong Konger
+// 64 Polish
+// 5 Azerbaijani
+// 35 Hungarian
+// 65 Portuguese
+// 6 Bahraini
+// 36 Icelander
+// 66 Qatari
+// 7 Belgian
+// 37 Indian
+// 67 Romanian
+// 8 Bolivian
+// 38 Indonesian
+// 68 Russian
+// 9 Brazilian
+// 39 Irish
+// 69 Salvadoran
+// 10 British
+// 40 Israeli
+// 70 Saudi
+// 11 Bulgarian
+// 41 Italian
+// 71 Scottish
+// 12 Cameroonian
+// 42 Jamaican
+// 72 Serbian
+// 13 Canadian
+// 43 Japanese
+// 73 Singaporean
+// 14 Chilean
+// 44 Jordanian
+// 74 Slovakian
+// 15 Chinese
+// 45 Kuwaiti
+// 75 Slovenian
+// 16 Colombian
+// 46 Latvian
+// 76 South Korean
+// 17 Costa Rican
+// 47 Lebanese
+// 77 South African
+// 18 Croatian 
+// 48 Lithuanian
+// 78 Spanish
+// 19 Cypriot
+// 49 Luxembourger
+// 79 Swedish
+// 20 Czech
+// 50 Malaysian
+// 80 Swiss
+// 21 Danish
+// 51 Maltese
+// 81 Thai
+// 22 Dutch
+// 52 Mexican
+// 82 Turkish
+// 23 Ecuadorian
+// 53 Monegasque
+// 83 Uruguayan
+// 24 English
+// 54 New Zealander
+// 84 Ukrainian
+// 25 Emirian
+// 55 Nicaraguan
+// 85 Venezuelan
+// 26 Estonian
+// 56 North Korean
+// 86 Welsh 
+// 27 Finnish
+// 57 Northern Irish 
+// 87 Barbadian
+// 28 French
+// 58 Norwegian
+// 88 Vietnamese
+// 29 German
+// 59 Omani
+// 30 Ghanaian
+// 60 Pakistani
